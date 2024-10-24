@@ -1,0 +1,244 @@
+/* Reset de estilos */
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('path/to/cooper.ttf') format('truetype'); /* Ajusta la ruta al archivo de la fuente */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fondo claro para todo el sitio */
+    color: #333; /* Color de texto */
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(122, 2, 2); /* Cambiar el color a rojo */
+    font-family: 'Cooper', sans-serif; /* Aplica la fuente Cooper */
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s, padding 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Color dorado al pasar el mouse */
+    padding: 5px 10px;
+}
+
+/* Secciones */
+.section {
+    padding: 80px 15px;
+    padding-top: calc(80px + 1rem); /* Espacio para el navbar fijo */
+    background-color: #fff; /* Fondo blanco para secciones */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Margen entre secciones */
+}
+
+#inicio {
+    background: url('pizza-bg.jpg') no-repeat center center/cover;
+    color: #770000;
+    padding: 100px 15px;
+    padding-top: calc(100px + 1rem); /* Espacio para el navbar fijo */
+}
+
+#inicio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+}
+
+/* Menú */
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Para que la imagen no sobresalga */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+.menu-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Precio */
+.precio {
+    font-weight: bold;
+    color: #e67e22; /* Color para los precios */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
+
+/* Ubicación */
+.mapa {
+    margin-top: 20px;
+}
+
+/* Contacto */
+.whatsapp-icon {
+    width: 50px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Color del fondo del footer */
+    color: #ffffff; /* Color del texto */
+    padding: 20px 0;
+}
+
+/* Estilo para enlaces en el footer */
+footer a {
+    color: #ffd700; /* Color dorado */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px; /* Ajuste del padding */
+    }
+
+    #inicio {
+        padding-top: calc(60px + 1rem); /* Ajuste del padding superior */
+    }
+
+    .menu-img {
+        height: auto; /* Ajusta automáticamente la altura */
+        max-height: 150px; /* Limita la altura máxima */
+    }
+
+    .navbar {
+        padding: 5px 10px; /* Ajustar el padding del navbar */
+    }
+    
+    .nav-link {
+        font-size: 0.9rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .section {
+        margin: 10px 0; /* Reduce el margen entre secciones */
+    }
+}
+
+/* iframe responsivo */
+.mapa iframe {
+    width: 100%;
+    height: 300px; /* Ajusta según sea necesario */
+}
+
+/* Mejoras adicionales */
+@media (max-width: 576px) {
+    #inicio h2 {
+        font-size: 2rem; /* Tamaño más pequeño en móviles */
+    }
+
+    #inicio p {
+        font-size: 1rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .nav-link {
+        font-size: 1rem; /* Tamaño más pequeño en móviles */
+    }
+
+    footer {
+        padding: 15px 0; /* Ajustar el padding del footer */
+    }
+}
+
+/* Animaciones para la sección de menú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-item {
+    animation: fadeIn 0.5s ease-in-out; /* Animación al cargar el menú */
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-icon {
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el mouse */
+}
+
+/* Media query para tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .menu-item {
+        margin: 15px; /* Espaciado entre los elementos del menú */
+    }
+}
+
+/* Efecto de desplazamiento suave para anclas */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo de borde para secciones */
+.section {
+    border: 1px solid #dee2e6; /* Borde ligero para secciones */
+}
+
+/* Aumentar el tamaño de las imágenes en pantallas grandes */
+@media (min-width: 1200px) {
+    .menu-img {
+        height: 250px; /* Tamaño más grande en pantallas grandes */
+    }
+}
+
+/* Estilo para botones (si decides incluir alguno) */
+.btn {
+    background-color: #e67e22; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #d35400; /* Color más oscuro al pasar el mouse */
+}
